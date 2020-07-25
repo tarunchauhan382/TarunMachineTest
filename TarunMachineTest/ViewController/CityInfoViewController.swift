@@ -9,18 +9,19 @@
 import UIKit
 
 class CityInfoViewController: UIViewController {
-
+    
     //MARK:- Variables
+    //MARK:-
     
     let cityInfoTableView = UITableView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         self.title = "Title"
         uiComponentSetup()
     }
-
+    
 }
 
 
@@ -43,6 +44,8 @@ extension CityInfoViewController{
         cityInfoTableView.rowHeight = UITableView.automaticDimension
         cityInfoTableView.estimatedRowHeight = UITableView.automaticDimension
         cityInfoTableView.tableFooterView = UIView()
+        
+        self.apiCallForRetrieveCityInfo()
     }
 }
 
@@ -74,5 +77,43 @@ extension CityInfoViewController:UITableViewDataSource,UITableViewDelegate{
         
         cell.selectionStyle = .none
         return cell
+    }
+}
+
+//MARK:- Webservices
+//MARK:-
+extension CityInfoViewController{
+    
+    func apiCallForRetrieveCityInfo(){
+        
+        if Reachability.sharedInstance.isConnectedToNetwork(){
+            
+            Webservices().getCityInfoData { [weak self] result in
+                
+                switch result{
+                    
+                case .success(let cityDataModel):
+                    
+                    print(cityDataModel.rows.count)
+                    print("Success")
+                    
+                case .failure(let error):
+                    
+                    let alertController = UIAlertController(title: "", message:error.localizedDescription, preferredStyle: .alert)
+                    alertController.addAction(UIAlertAction(title: "Ok", style: .default))
+                    self?.present(alertController, animated: true, completion: nil)
+                }
+                
+            }
+        }
+        else{
+            
+            let alertController = UIAlertController(title: "", message: "Please check your internet connection", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default) {UIAlertAction in
+                self.cityInfoTableView.reloadData()
+            }
+            alertController.addAction(okAction)
+            self.present(alertController, animated: true, completion: nil)
+        }
     }
 }
