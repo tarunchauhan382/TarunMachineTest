@@ -128,7 +128,7 @@ extension CityInfoViewController{
                 case .failure(let error):
                     
                     let alertController = UIAlertController(title: "", message:error.localizedDescription, preferredStyle: .alert)
-                    alertController.addAction(UIAlertAction(title: "Ok", style: .default))
+                    alertController.addAction(UIAlertAction(title: AppConstants.okText, style: .default))
                     self?.present(alertController, animated: true, completion: nil)
                 }
                 
@@ -136,8 +136,8 @@ extension CityInfoViewController{
         }
         else{
             
-            let alertController = UIAlertController(title: "", message: "Please check your internet connection", preferredStyle: .alert)
-            let okAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default) {UIAlertAction in
+            let alertController = UIAlertController(title: "", message: AppConstants.noInternetConnectionText, preferredStyle: .alert)
+            let okAction = UIAlertAction(title: AppConstants.okText, style: UIAlertAction.Style.default) {UIAlertAction in
                 self.cityInfoTableView.reloadData()
             }
             alertController.addAction(okAction)
