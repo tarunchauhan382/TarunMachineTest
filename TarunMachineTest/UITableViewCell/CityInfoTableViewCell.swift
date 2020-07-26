@@ -8,9 +8,10 @@
 
 import UIKit
 import Foundation
+import SDWebImage
 
 class CityInfoTableViewCell: UITableViewCell {
-
+    
     //MARK: Passive Control Image view Implementation
     
     let placeImage:UIImageView = {
@@ -34,7 +35,7 @@ class CityInfoTableViewCell: UITableViewCell {
         return lblHeadlineTitle
     }()
     
-    //MARK: Passive Control Title Label Implementation
+    //MARK: Passive Control Description Label Implementation
     
     let descriptionLabel:UILabel = {
         
@@ -80,6 +81,17 @@ class CityInfoTableViewCell: UITableViewCell {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+    }
+    
+    //MARK: Configure Cell
+    
+    public func configure(with info:DataViewModel){
+        
+        self.selectionStyle = .none
+        self.titleHeadlineLabel.text =  info.title
+        self.descriptionLabel.text = info.description
+        self.placeImage.sd_setImage(with: URL(string: info.imageHref), placeholderImage: UIImage(named: "imgPlaceholder"))
+        
     }
     
 }

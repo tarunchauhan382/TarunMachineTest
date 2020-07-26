@@ -15,13 +15,36 @@ class CityInfoViewController: UIViewController {
     
     let cityInfoTableView = UITableView()
     
+    private var cityListVM:CityInfoViewModel!
+    
+    lazy var refreshControl: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action:
+            #selector(self.handleRefresh(_:)),
+                                 for: UIControl.Event.valueChanged)
+        refreshControl.tintColor = UIColor.darkGray
+        
+        return refreshControl
+    }()
+    
+    
+    //MARK:- View Controller life cycle method
+    //MARK:-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "Title"
         uiComponentSetup()
     }
     
+    //MARK:- Refresh control selector method
+    //MARK:-
+    
+    @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
+        
+        refreshControl.endRefreshing()
+        self.apiCallForRetrieveCityInfo()
+    }
 }
 
 
@@ -44,6 +67,7 @@ extension CityInfoViewController{
         cityInfoTableView.rowHeight = UITableView.automaticDimension
         cityInfoTableView.estimatedRowHeight = UITableView.automaticDimension
         cityInfoTableView.tableFooterView = UIView()
+        self.cityInfoTableView.addSubview(self.refreshControl)
         
         self.apiCallForRetrieveCityInfo()
     }
@@ -56,12 +80,12 @@ extension CityInfoViewController:UITableViewDataSource,UITableViewDelegate{
     
     func numberOfSections(in tableView: UITableView) -> Int {
         
-        return 1
+        return self.cityListVM == nil ? 0 : self.cityListVM.numbrOfSection
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 4
+        return self.cityListVM.numberOfRowsinSection(section)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -70,15 +94,12 @@ extension CityInfoViewController:UITableViewDataSource,UITableViewDelegate{
             fatalError("Info Cell not found")
         }
         
-        cell.titleHeadlineLabel.text = "Title Headline Dummy Text"
-        cell.descriptionLabel.text = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters"
-        
-        cell.placeImage.image = UIImage(named: "imgPlaceholder")
-        
-        cell.selectionStyle = .none
+        cell.configure(with: self.cityListVM.dataAtIndex(indexPath.row))
+       
         return cell
     }
 }
+
 
 //MARK:- Webservices
 //MARK:-
@@ -95,7 +116,14 @@ extension CityInfoViewController{
                 case .success(let cityDataModel):
                     
                     print(cityDataModel.rows.count)
-                    print("Success")
+                    if let record = cityDataModel.rows{
+                        
+                        self?.cityListVM = CityInfoViewModel(row: record)
+                        DispatchQueue.main.async {
+                            self?.navigationItem.title = cityDataModel.title
+                            self?.cityInfoTableView.reloadData()
+                        }
+                    }
                     
                 case .failure(let error):
                     
@@ -114,6 +142,7 @@ extension CityInfoViewController{
             }
             alertController.addAction(okAction)
             self.present(alertController, animated: true, completion: nil)
+            
         }
     }
 }

@@ -18,6 +18,9 @@
 		1AFA3BC424CC732F00C564E7 /* Webservices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFA3BC324CC732F00C564E7 /* Webservices.swift */; };
 		1AFA3BC624CC737C00C564E7 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFA3BC524CC737C00C564E7 /* Reachability.swift */; };
 		1AFA3BCB24CC78B700C564E7 /* CityDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFA3BCA24CC78B700C564E7 /* CityDataModel.swift */; };
+		1AFA3BCF24CC8FCD00C564E7 /* CityInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFA3BCE24CC8FCD00C564E7 /* CityInfoViewModel.swift */; };
+		F09930A8EAF95E6D421096BF /* Pods_TarunMachineTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9244B4747C51EDEF71AAB923 /* Pods_TarunMachineTest.framework */; };
+		FAB22C3B10213619F278001A /* Pods_TarunMachineTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C2160AFC5EEC31E3096245E /* Pods_TarunMachineTestTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E337C4B262FF1A292B7D0F8 /* Pods-TarunMachineTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TarunMachineTest.release.xcconfig"; path = "Target Support Files/Pods-TarunMachineTest/Pods-TarunMachineTest.release.xcconfig"; sourceTree = "<group>"; };
 		1AFA3B9724CC6D4400C564E7 /* TarunMachineTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TarunMachineTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AFA3B9A24CC6D4400C564E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1AFA3B9C24CC6D4400C564E7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,6 +50,12 @@
 		1AFA3BC324CC732F00C564E7 /* Webservices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Webservices.swift; sourceTree = "<group>"; };
 		1AFA3BC524CC737C00C564E7 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		1AFA3BCA24CC78B700C564E7 /* CityDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDataModel.swift; sourceTree = "<group>"; };
+		1AFA3BCE24CC8FCD00C564E7 /* CityInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CityInfoViewModel.swift; path = TarunMachineTest/DataModel/CityInfoViewModel.swift; sourceTree = SOURCE_ROOT; };
+		2C2160AFC5EEC31E3096245E /* Pods_TarunMachineTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TarunMachineTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E722E95535CE99B40FD675D /* Pods-TarunMachineTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TarunMachineTestTests.debug.xcconfig"; path = "Target Support Files/Pods-TarunMachineTestTests/Pods-TarunMachineTestTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7B6F5387EB9C0BAD43CBF73B /* Pods-TarunMachineTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TarunMachineTest.debug.xcconfig"; path = "Target Support Files/Pods-TarunMachineTest/Pods-TarunMachineTest.debug.xcconfig"; sourceTree = "<group>"; };
+		9244B4747C51EDEF71AAB923 /* Pods_TarunMachineTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TarunMachineTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE00668AE534DF6405FE9829 /* Pods-TarunMachineTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TarunMachineTestTests.release.xcconfig"; path = "Target Support Files/Pods-TarunMachineTestTests/Pods-TarunMachineTestTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F09930A8EAF95E6D421096BF /* Pods_TarunMachineTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,18 +71,33 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAB22C3B10213619F278001A /* Pods_TarunMachineTestTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		12A947003D53E385FEA26718 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7B6F5387EB9C0BAD43CBF73B /* Pods-TarunMachineTest.debug.xcconfig */,
+				0E337C4B262FF1A292B7D0F8 /* Pods-TarunMachineTest.release.xcconfig */,
+				5E722E95535CE99B40FD675D /* Pods-TarunMachineTestTests.debug.xcconfig */,
+				BE00668AE534DF6405FE9829 /* Pods-TarunMachineTestTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		1AFA3B8E24CC6D4400C564E7 = {
 			isa = PBXGroup;
 			children = (
 				1AFA3B9924CC6D4400C564E7 /* TarunMachineTest */,
 				1AFA3BB024CC6D5000C564E7 /* TarunMachineTestTests */,
 				1AFA3B9824CC6D4400C564E7 /* Products */,
+				12A947003D53E385FEA26718 /* Pods */,
+				374668DEA70DA090A9DB796A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -87,6 +113,7 @@
 		1AFA3B9924CC6D4400C564E7 /* TarunMachineTest */ = {
 			isa = PBXGroup;
 			children = (
+				1AFA3BCD24CC8F7A00C564E7 /* ViewModel */,
 				1AFA3BC924CC788E00C564E7 /* DataModel */,
 				1AFA3BC224CC72F100C564E7 /* Utilities */,
 				1AFA3BBD24CC6DE300C564E7 /* ViewController */,
@@ -143,6 +170,23 @@
 			path = DataModel;
 			sourceTree = "<group>";
 		};
+		1AFA3BCD24CC8F7A00C564E7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1AFA3BCE24CC8FCD00C564E7 /* CityInfoViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		374668DEA70DA090A9DB796A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9244B4747C51EDEF71AAB923 /* Pods_TarunMachineTest.framework */,
+				2C2160AFC5EEC31E3096245E /* Pods_TarunMachineTestTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -150,9 +194,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1AFA3BB624CC6D5000C564E7 /* Build configuration list for PBXNativeTarget "TarunMachineTest" */;
 			buildPhases = (
+				B330D81E38EE1678636030F4 /* [CP] Check Pods Manifest.lock */,
 				1AFA3B9324CC6D4400C564E7 /* Sources */,
 				1AFA3B9424CC6D4400C564E7 /* Frameworks */,
 				1AFA3B9524CC6D4400C564E7 /* Resources */,
+				98EC9133A923D784895D3440 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -167,6 +213,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1AFA3BB924CC6D5000C564E7 /* Build configuration list for PBXNativeTarget "TarunMachineTestTests" */;
 			buildPhases = (
+				729E64B94D1FA7B0B8849B40 /* [CP] Check Pods Manifest.lock */,
 				1AFA3BA924CC6D5000C564E7 /* Sources */,
 				1AFA3BAA24CC6D5000C564E7 /* Frameworks */,
 				1AFA3BAB24CC6D5000C564E7 /* Resources */,
@@ -239,6 +286,70 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		729E64B94D1FA7B0B8849B40 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TarunMachineTestTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		98EC9133A923D784895D3440 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TarunMachineTest/Pods-TarunMachineTest-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TarunMachineTest/Pods-TarunMachineTest-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TarunMachineTest/Pods-TarunMachineTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B330D81E38EE1678636030F4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TarunMachineTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1AFA3B9324CC6D4400C564E7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -247,6 +358,7 @@
 				1AFA3BCB24CC78B700C564E7 /* CityDataModel.swift in Sources */,
 				1AFA3BC424CC732F00C564E7 /* Webservices.swift in Sources */,
 				1AFA3B9B24CC6D4400C564E7 /* AppDelegate.swift in Sources */,
+				1AFA3BCF24CC8FCD00C564E7 /* CityInfoViewModel.swift in Sources */,
 				1AFA3BC624CC737C00C564E7 /* Reachability.swift in Sources */,
 				1AFA3B9D24CC6D4400C564E7 /* SceneDelegate.swift in Sources */,
 				1AFA3BBF24CC6DF400C564E7 /* CityInfoTableViewCell.swift in Sources */,
@@ -408,6 +520,7 @@
 		};
 		1AFA3BB724CC6D5000C564E7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B6F5387EB9C0BAD43CBF73B /* Pods-TarunMachineTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -426,6 +539,7 @@
 		};
 		1AFA3BB824CC6D5000C564E7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E337C4B262FF1A292B7D0F8 /* Pods-TarunMachineTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -444,6 +558,7 @@
 		};
 		1AFA3BBA24CC6D5000C564E7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E722E95535CE99B40FD675D /* Pods-TarunMachineTestTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -465,6 +580,7 @@
 		};
 		1AFA3BBB24CC6D5000C564E7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE00668AE534DF6405FE9829 /* Pods-TarunMachineTestTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

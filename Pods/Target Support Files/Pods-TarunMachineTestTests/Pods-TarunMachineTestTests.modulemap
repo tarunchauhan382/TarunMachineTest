@@ -1,0 +1,6 @@
+framework module Pods_TarunMachineTestTests {
+  umbrella header "Pods-TarunMachineTestTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
